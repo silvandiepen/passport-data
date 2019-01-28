@@ -1,0 +1,25 @@
+{
+  "name": "passport-data",
+  "version": "0.0.1",
+  "description": "Passport data of the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvandiepen/passport-data.git"
+  },
+  "keywords": [
+    "passport",
+    "data",
+    "visa"
+  ],
+  "author": "Sil van Diepen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silvandiepen/passport-data/issues"
+  },
+  "homepage": "https://github.com/silvandiepen/passport-data#readme"
+}
