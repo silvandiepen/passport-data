@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "build:countries": "node scripts/countries.js",
-    "build:combine": "node scripts/combine.js"
+    "build:combine": "node scripts/combine.js",
+    "build:stats": "node scripts/stats.js"
   },
   "repository": {
     "type": "git",
