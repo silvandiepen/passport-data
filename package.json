@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "node index.js"
+    "build:countries": "node scripts/countries.js",
+    "build:combine": "node scripts/combine.js"
   },
   "repository": {
     "type": "git",
