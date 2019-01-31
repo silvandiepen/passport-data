@@ -1,14 +1,16 @@
 const fs = require('fs');
 
 let passportData = JSON.parse(fs.readFileSync('./src/passports.json', 'utf8'));
-let passportTitles = JSON.parse(fs.readFileSync('./src/countries.json', 'utf8'));
+let passportTitles = JSON.parse(
+	fs.readFileSync('./src/countries.json', 'utf8')
+);
 let passportStats = [];
 
-passportData.forEach((passport) => {
+passportData.forEach((passport, i) => {
 	// console.log(passport.Passport);
 
 	let score = {
-		title: '',
+		title: passportTitles[i].title,
 		total: 0,
 		free: 0,
 		eta: 0,
@@ -17,11 +19,6 @@ passportData.forEach((passport) => {
 	};
 
 	Object.keys(passport).forEach((country, index) => {
-		// console.log(passport);
-		// console.log(passportTitles[index].title);
-		if(passportTitles[index]){
-			score.title = passportTitles[index].title;
-		}
 		
 		switch (passport[country]) {
 			case 3:
@@ -39,11 +36,18 @@ passportData.forEach((passport) => {
 		}
 		if (Object.keys(passport).length == index + 1) {
 			score.total = score.free * 3 + score.eta * 2 + score.arrival * 1;
-			let newCountry = Object.assign({ id: passport.Passport }, score);
+
+
+
+			// console.log(title);
+			let newCountry = Object.assign(
+				{ id: passport.Passport, },
+				score
+			);
 			// console.log(newCountry);
 			newCountryArray = [];
 			newCountryArray[passport.Passport] = newCountry;
-			passportStats.push( newCountry);
+			passportStats.push(newCountry);
 
 			// fs.writeFileSync(
 			// 	'stats/'+ passport.Passport +'.json',
@@ -54,11 +58,7 @@ passportData.forEach((passport) => {
 	});
 });
 
-console.log(JSON.stringify(passportStats));
+// console.log(JSON.stringify(passportStats));
 setTimeout(() => {
-	fs.writeFileSync(
-		'stats.json',
-		JSON.stringify(passportStats),
-		'utf8'
-	);	
-},1000);
+	fs.writeFileSync('stats.json', JSON.stringify(passportStats), 'utf8');
+}, 1000);
