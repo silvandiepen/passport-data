@@ -10,6 +10,7 @@ passportData.forEach((passport, i) => {
 	// console.log(passport.Passport);
 
 	let score = {
+		id: passport.Passport,
 		title: passportTitles[i].title,
 		score: {
 			total: 0,
@@ -20,7 +21,7 @@ passportData.forEach((passport, i) => {
 		},
 		data: passport
 	};
-	
+
 	delete score.data.Passport;
 
 	Object.keys(passport).forEach((country, index) => {
@@ -42,7 +43,7 @@ passportData.forEach((passport, i) => {
 			score.score.total =
 				score.score.free * 3 + score.score.eta * 2 + score.score.arrival * 1;
 			// console.log(title);
-			let newCountry = Object.assign({ id: passport.Passport }, score);
+			let newCountry = Object.assign({}, score);
 			passportStats.push(newCountry);
 		}
 	});
