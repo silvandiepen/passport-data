@@ -6,7 +6,7 @@
 	{ "title": "Angola", "short_title": "Angola", "id": "AO" },
 	{
 		"title": "Antigua and Barbuda",
-		"short_title": "Antigua & Barbuda",
+		"short_title": "Antigua",
 		"id": "AG"
 	},
 	{ "title": "Argentina", "short_title": "Argentina", "id": "AR" },
@@ -45,7 +45,7 @@
 	{ "title": "Cape Verde", "short_title": "Cape Verde", "id": "CV" },
 	{
 		"title": "Central African Republic",
-		"short_title": "Central Africa Rep.",
+		"short_title": "C. Africa Rep.",
 		"id": "CF"
 	},
 	{ "title": "Chad", "short_title": "Chad", "id": "TD" },
@@ -212,7 +212,7 @@
 	{ "title": "Sri Lanka", "short_title": "Sri Lanka", "id": "LK" },
 	{
 		"title": "Saint Vincent and the Grenadines",
-		"short_title": "St. Vincent & the Grenadines",
+		"short_title": "St. Vincent",
 		"id": "VC"
 	},
 	{ "title": "Sudan", "short_title": "Sudan", "id": "SD" },
