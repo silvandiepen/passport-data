@@ -12,6 +12,7 @@ passportData.forEach((passport, i) => {
 	let score = {
 		id: passport.Passport,
 		title: passportTitles[i].title,
+		short_title: passportTitles[i].short_title,
 		score: {
 			total: 0,
 			free: 0,

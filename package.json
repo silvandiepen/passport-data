@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "build": " npm run build:countries && npm run build:combine && npm run build:stats && npm run build:all",
     "build:countries": "node scripts/countries.js",
     "build:combine": "node scripts/combine.js",
     "build:stats": "node scripts/stats.js",
